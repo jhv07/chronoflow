@@ -311,3 +311,7 @@ This project is open source and available under the MIT License.
 
 **Enjoy managing your timeline with ChronoFlow! ⏰✨**
 
+=======
+# Chronoflow
+Interactive timeline with custom event triggers
+
