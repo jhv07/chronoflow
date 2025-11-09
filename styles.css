@@ -929,3 +929,40 @@ textarea {
     opacity: 0.7;
 }
 
+/* Modern glass modal styling */
+.glass-modal {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0px 8px 32px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Pop animation */
+.animate-pop {
+    animation: pop 0.3s ease;
+}
+@keyframes pop {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Eye icon inside password field */
+.password-group {
+    position: relative;
+}
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 35px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Password strength text */
+.strength-text {
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: bold;
+}

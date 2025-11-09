@@ -577,3 +577,34 @@ function escapeHtml(text) {
 // ===== Periodic Notification Check =====
 setInterval(checkForNotifications, 60000); // Check every minute
 
+function togglePassword(inputId) {
+    const input = document.getElementById(inputId);
+    input.type = input.type === "password" ? "text" : "password";
+}
+
+//  Password validation for Signup
+const signupPassword = document.getElementById("signup-password");
+const strengthText = document.getElementById("password-strength-text");
+
+signupPassword?.addEventListener("input", () => {
+    const password = signupPassword.value;
+    let strength = "";
+
+    if (password.length < 6) {
+        strength = " Too short (min 6 characters)";
+        strengthText.style.color = "red";
+    } else if (!/[A-Z]/.test(password)) {
+        strength = " Add at least 1 uppercase letter";
+        strengthText.style.color = "orange";
+    } else if (!/[0-9]/.test(password)) {
+        strength = " Add at least 1 number";
+        strengthText.style.color = "orange";
+    } else {
+        strength = " Strong password";
+        strengthText.style.color = "lightgreen";
+    }
+
+    strengthText.textContent = strength;
+});
+
+
